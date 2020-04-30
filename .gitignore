@@ -6,6 +6,7 @@ report/*
 npm-debug.log
 chromedriver.log
 selenium-server.log
-
-
-
+screenshots
+.idea
+.vscode
+/.idea/.gitignore

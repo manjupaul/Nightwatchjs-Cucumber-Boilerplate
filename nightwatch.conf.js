@@ -11,20 +11,15 @@ module.exports = {
   page_objects_path: ["page_objects/"],
   live_output: false,
   disable_colors: false,
-  selenium: {
-    start_process: true,
-    server_path: seleniumServer.path,
-    log_path: "",
-    host: "127.0.0.1",
-    port: 4444,
-    cli_args: {
-      'webdriver.chrome.driver': chromedriver.path,
-      'webdriver.gecko.driver': geckodriver.path
-    }
-  },
   test_settings: {
     default: {
       silent: true,
+      webdriver: {
+        start_process: true,
+        server_path: chromedriver.path,
+        port: 4444,
+        cli_args: ['--port=4444'],
+      },
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,
